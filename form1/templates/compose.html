@@ -1,0 +1,31 @@
+{% include 'partials/header.html' %}
+<div class="container">
+	<div class="row">
+		<div class="col-xs-2">
+			{% include 'partials/sidebar.html' %}
+		</div>
+		<div class="col-xs-6">
+			<a href="/form1" style="color:green;">Discard</a><br><br>
+			<form data-toggle="validator" role="form" action="{% url 'compose' %}" method="post">
+				{% csrf_token %}
+				<div class="form-group">
+					<label for="inputName" class="control-label">Name</label>
+					<input type="email" name="to" id="to" class="form-control" placeholder="Enter email" required>
+					<br>
+					<label for="inputName" class="control-label">Subject</label>
+					<input type="text" name="subject" id="subject" class="form-control" placeholder="Enter subject" required>
+					<br>
+					<label for="inputName" class="control-label">Body</label>
+					<textarea name="body" id="body" class="form-control" placeholder="Enter content" required></textarea>
+					<br>
+					<input type="submit" value="Submit" class="btn btn-success">
+				</div>
+			</form>
+		</div>
+		<div class="col-xs-4">
+		
+		</div>
+	</div>
+</div>
+
+{% include 'partials/footer.html' %}

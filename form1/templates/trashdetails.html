@@ -1,0 +1,18 @@
+{% include 'partials/header.html' %}
+<table>
+	<tr>
+		<td>
+			{% include 'partials/sidebar.html' %}
+		</td>
+		<td>
+			<a href="/form1" style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;<< Back</a>
+			<p>ID: {{tmail.remove_id}}</p>
+			<p>Mail: {{tmail.mail}}</p>
+			<p>Subject: {{tmail.subject}}</p>
+			<p>Content: {{tmail.body}}</p>
+		</td>
+	</tr>
+</table>
+
+{% include 'partials/footer.html' %}
+

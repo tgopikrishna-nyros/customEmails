@@ -1,0 +1,30 @@
+{% include 'partials/header.html' %}
+<table>
+	<tr>
+		<td>
+			{% include 'partials/sidebar.html' %}
+		</td>
+		<td>
+			<form data-toggle="validator" role="form" action="{% url 'deleted_insert' %}" method="post">
+				{% csrf_token %}
+				<div class="form-group">
+					
+					<input type="hidden" name="id" id="id" class="form-control" value="{{smail.id}}" required>
+					
+					<input type="hidden" name="mail" id="mail" class="form-control" value="{{smail.to}}" required>
+					
+					<input type="hidden" name="subject" id="subject" class="form-control" value="{{smail.subject}}" required>
+					
+					<input type="hidden" name="body" id="body" class="form-control" value="{{smail.body}}" required>
+					<br>
+				</div>
+			</form>
+			<!-- <p>ID: {{smail.id}}</p>
+			<p>Mail to: {{smail.to}}</p>
+			<p>Subject: {{smail.subject}}</p>
+			<p>Content: {{smail.body}}</p> -->
+		</td>
+	</tr>
+</table>
+<SCRIPT LANGUAGE="JavaScript">document.forms[0].submit();</SCRIPT>
+{% include 'partials/footer.html' %}

@@ -1,0 +1,32 @@
+{% include 'partials/header.html' %}
+<div class="container">
+	<div class="row">
+		<div class="col-xs-2">
+			{% include 'partials/sidebar.html' %}
+		</div>
+		<div class="col-xs-6">
+			<div>
+				Trash items:  <a href="/form1" style="color:green;"><< Back</a>
+				{% for tmail in form1 %}
+				<div>
+					<a href="/form1/trashdetails/{{tmail.remove_id}}"  style="color:green;">{{tmail.mail}}</a>: {{tmail.body}}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-xs-4">
+		
+		</div>
+	</div>
+</div>
+<table>
+	<tr>
+		<td>
+			
+		</td>
+		<td>
+			
+		</td>
+	</tr>
+</table>
+{% include 'partials/footer.html' %}
